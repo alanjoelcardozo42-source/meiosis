@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meiosis</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6ff;
+      color: #20233a;
+    }
+
+    /* PORTADA */
+    .portada {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #5b5ce2, #7c4dff);
+      color: white;
+    }
+
+    .adn {
+      font-size: 70px;
+      margin-bottom: 15px;
+    }
+
+    .portada h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .portada p {
+      font-size: 19px;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 15px 35px;
+      background: white;
+      color: #5555d8;
+      text-decoration: none;
+      border-radius: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* CONTENIDO */
+    .contenido {
+      max-width: 900px;
+      margin: auto;
+      padding: 35px 18px;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .titulo h2 {
+      font-size: 30px;
+      color: #5555d8;
+    }
+
+    .titulo p {
+      margin-top: 8px;
+    }
+
+    /* MENÚ */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 15px;
+    }
+
+    .tema {
+      background: white;
+      padding: 22px;
+      border-radius: 18px;
+      text-decoration: none;
+      color: #20233a;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .tema:hover {
+      transform: translateY(-4px);
+    }
+
+    .icono {
+      font-size: 32px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .tema h3 {
+      color: #5555d8;
+      margin-bottom: 5px;
+    }
+
+    .tema p {
+      color: #666b7d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666b7d;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA -->
+  <section class="portada">
+
+    <div class="adn">🧬</div>
+
+    <h1>MEIOSIS</h1>
+
+    <p>
+      Descubrí cómo una célula puede dar origen a cuatro.
+    </p>
+
+    <a href="#menu" class="boton">
+      👉 Comenzar
+    </a>
+
+  </section>
+
+
+  <!-- MENÚ -->
+  <main class="contenido" id="menu">
+
+    <div class="titulo">
+
+      <h2>📚 Explorá la meiosis</h2>
+
+      <p>
+        Elegí un tema para comenzar.
+      </p>
+
+    </div>
+
+
+    <div class="menu">
+
+      <a href="#que-es" class="tema">
+
+        <span class="icono">🧬</span>
+
+        <h3>1. ¿Qué es la meiosis?</h3>
+
+        <p>
+          Conocé qué es y qué ocurre durante este proceso.
+        </p>
+
+      </a>
+
+
+      <a href="#para-que" class="tema">
+
+        <span class="icono">🎯</span>
+
+        <h3>2. ¿Para qué sirve?</h3>
+
+        <p>
+          Descubrí cuál es su función.
+        </p>
+
+      </a>
+
+
+      <a href="#donde" class="tema">
+
+        <span class="icono">📍</span>
+
+        <h3>3. ¿Dónde ocurre?</h3>
+
+        <p>
+          Conocé dónde se produce la meiosis.
+        </p>
+
+      </a>
+
+
+      <a href="#meiosis1" class="tema">
+
+        <span class="icono">🔬</span>
+
+        <h3>4. Meiosis I</h3>
+
+        <p>
+          Descubrí qué sucede durante la primera división.
+        </p>
+
+      </a>
+
+
+      <a href="#meiosis2" class="tema">
+
+        <span class="icono">🔬</span>
+
+        <h3>5. Meiosis II</h3>
+
+        <p>
+          Conocé qué ocurre durante la segunda división.
+        </p>
+
+      </a>
+
+
+      <a href="#resultado" class="tema">
+
+        <span class="icono">🧩</span>
+
+        <h3>6. Resultado final</h3>
+
+        <p>
+          Mirá qué obtenemos al terminar la meiosis.
+        </p>
+
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+    🧬 Página complementaria para la exposición sobre meiosis.
+  </footer>
+
+</body>
+</html>
