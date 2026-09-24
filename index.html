@@ -16,6 +16,7 @@
       font-family: Arial, sans-serif;
       background: #f4f6ff;
       color: #20233a;
+      scroll-behavior: smooth;
     }
 
     /* PORTADA */
@@ -84,6 +85,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 15px;
+      margin-bottom: 50px;
     }
 
     .tema {
@@ -115,6 +117,42 @@
       color: #666b7d;
     }
 
+    /* SECCIONES DE INFORMACIÓN */
+    .seccion-card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    }
+
+    .seccion-card h2 {
+      color: #5555d8;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .seccion-card p {
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .seccion-card ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .volver-arriba {
+      display: inline-block;
+      margin-top: 10px;
+      color: #5555d8;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -127,119 +165,122 @@
 
   <!-- PORTADA -->
   <section class="portada">
-
     <div class="adn">🧬</div>
-
     <h1>MEIOSIS</h1>
-
-    <p>
-      Descubrí cómo una célula puede dar origen a cuatro.
-    </p>
-
-    <a href="#menu" class="boton">
-      👉 Comenzar
-    </a>
-
+    <p>Descubrí cómo una célula puede dar origen a cuatro.</p>
+    <a href="#menu" class="boton">👉 Comenzar</a>
   </section>
 
-
-  <!-- MENÚ -->
+  <!-- MENÚ PRINCIPAL -->
   <main class="contenido" id="menu">
 
     <div class="titulo">
-
       <h2>📚 Explorá la meiosis</h2>
-
-      <p>
-        Elegí un tema para comenzar.
-      </p>
-
+      <p>Elegí un tema para comenzar.</p>
     </div>
-
 
     <div class="menu">
-
       <a href="#que-es" class="tema">
-
         <span class="icono">🧬</span>
-
         <h3>1. ¿Qué es la meiosis?</h3>
-
-        <p>
-          Conocé qué es y qué ocurre durante este proceso.
-        </p>
-
+        <p>Conocé qué es y qué ocurre durante este proceso.</p>
       </a>
-
 
       <a href="#para-que" class="tema">
-
         <span class="icono">🎯</span>
-
         <h3>2. ¿Para qué sirve?</h3>
-
-        <p>
-          Descubrí cuál es su función.
-        </p>
-
+        <p>Descubrí cuál es su función.</p>
       </a>
-
 
       <a href="#donde" class="tema">
-
         <span class="icono">📍</span>
-
         <h3>3. ¿Dónde ocurre?</h3>
-
-        <p>
-          Conocé dónde se produce la meiosis.
-        </p>
-
+        <p>Conocé dónde se produce la meiosis.</p>
       </a>
-
 
       <a href="#meiosis1" class="tema">
-
         <span class="icono">🔬</span>
-
         <h3>4. Meiosis I</h3>
-
-        <p>
-          Descubrí qué sucede durante la primera división.
-        </p>
-
+        <p>Descubrí qué sucede durante la primera división.</p>
       </a>
-
 
       <a href="#meiosis2" class="tema">
-
         <span class="icono">🔬</span>
-
         <h3>5. Meiosis II</h3>
-
-        <p>
-          Conocé qué ocurre durante la segunda división.
-        </p>
-
+        <p>Conocé qué ocurre durante la segunda división.</p>
       </a>
-
 
       <a href="#resultado" class="tema">
-
         <span class="icono">🧩</span>
-
         <h3>6. Resultado final</h3>
-
-        <p>
-          Mirá qué obtenemos al terminar la meiosis.
-        </p>
-
+        <p>Mirá qué obtenemos al terminar la meiosis.</p>
       </a>
-
     </div>
 
-  </main>
+    <!-- CONTENIDO DETALLADO DE CADA TEMA -->
 
+    <section id="que-es" class="seccion-card">
+      <h2>🧬 1. ¿Qué es la meiosis?</h2>
+      <p>La <strong>meiosis</strong> es un proceso especial de división celular en el cual una célula diploide (con el juego completo de cromosomas) se divide para formar células haploides (con la mitad del material genético).</p>
+      <p>A diferencia de la mitosis, la meiosis incluye dos divisiones consecutivas (Meiosis I y Meiosis II), reduciendo el número de cromosomas a la mitad.</p>
+      <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
+    </section>
+
+    <section id="para-que" class="seccion-card">
+      <h2>🎯 2. ¿Para qué sirve?</h2>
+      <p>La meiosis cumple dos funciones vitales principales para los seres vivos:</p>
+      <ul>
+        <li><strong>Formación de gametos:</strong> Permite producir óvulos y espermatozoides necesarios para la reproducción sexual.</li>
+        <li><strong>Variabilidad genética:</strong> Gracias al intercambio de material genético (entrecurzamiento), cada célula resultante es genéticamente única, lo que genera diversidad en la especie.</li>
+      </ul>
+      <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
+    </section>
+
+    <section id="donde" class="seccion-card">
+      <h2>📍 3. ¿Dónde ocurre?</h2>
+      <p>La meiosis no ocurre en cualquier célula de nuestro cuerpo. Se lleva a cabo exclusivamente en las <strong>células germinales</strong> ubicadas en los órganos reproductores (gónadas):</p>
+      <ul>
+        <li>En los <strong>testículos</strong> (para producir espermatozoides mediante la espermatogénesis).</li>
+        <li>En los <strong>ovarios</strong> (para producir óvulos mediante la ovogénesis).</li>
+      </ul>
+      <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
+    </section>
+
+    <section id="meiosis1" class="seccion-card">
+      <h2>🔬 4. Meiosis I (Primera División)</h2>
+      <p>Conocida como la fase reduccional. Los cromosomas homólogos se separan. Se compone de 4 etapas principales:</p>
+      <ul>
+        <li><strong>Profase I:</strong> Los cromosomas se condensan y ocurre el <em>entrecruzamiento</em> (crossing-over), donde se intercambia información genética.</li>
+        <li><strong>Metafase I:</strong> Los pares de cromosomas se alinean en el centro de la célula.</li>
+        <li><strong>Anafase I:</strong> Los cromosomas homólogos se separan y van hacia polos opuestos.</li>
+        <li><strong>Telofase I:</strong> Se forman dos células hijas, cada una con la mitad de los cromosomas de la célula madre.</li>
+      </ul>
+      <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
+    </section>
+
+    <section id="meiosis2" class="seccion-card">
+      <h2>🔬 5. Meiosis II (Segunda División)</h2>
+      <p>Es muy similar a una mitosis convencional. Ocurre sin una duplicación previa del ADN:</p>
+      <ul>
+        <li><strong>Profase II:</strong> La envoltura nuclear se desintegra nuevamente y las fibras del huso se forman.</li>
+        <li><strong>Metafase II:</strong> Los cromosomas se alinean de forma individual en el centro celular.</li>
+        <li><strong>Anafase II:</strong> Las cromátidas hermanas se separan y son arrastradas hacia extremos opuestos.</li>
+        <li><strong>Telofase II:</strong> Se vuelven a formar las membranas nucleares alrededor de los nuevos núcleos.</li>
+      </ul>
+      <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
+    </section>
+
+    <section id="resultado" class="seccion-card">
+      <h2>🧩 6. Resultado final</h2>
+      <p>Al concluir la Meiosis I y la Meiosis II, obtenemos:</p>
+      <ul>
+        <li><strong>4 células hijas haploides (n).</strong></li>
+        <li>Todas las células resultantes son <strong>genéticamente distintas</strong> entre sí y respecto a la célula madre.</li>
+      </ul>
+      <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
+    </section>
+
+  </main>
 
   <footer>
     🧬 Página complementaria para la exposición sobre meiosis.
