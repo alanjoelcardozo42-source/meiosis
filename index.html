@@ -138,27 +138,20 @@
       margin-bottom: 15px;
     }
 
-    .seccion-card ul {
-      margin-left: 20px;
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    /* ESQUEMAS VISUALES */
-    .esquema-box {
-      background: #f0f2fe;
-      border-left: 4px solid #5555d8;
-      padding: 20px;
-      border-radius: 12px;
+    /* CONTENEDOR DE IMÁGENES / ILUSTRACIONES */
+    .imagen-box {
       text-align: center;
       margin: 20px 0;
-      font-weight: bold;
+      background: #f8fafc;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px dashed #cbd5e1;
     }
 
-    .esquema-flecha {
-      margin: 8px 0;
-      color: #5555d8;
-      font-size: 20px;
+    .imagen-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
 
     /* DATO EXTRA Y CONCEPTOS CLAVE */
@@ -237,11 +230,16 @@
       cursor: pointer;
       text-align: left;
       font-size: 15px;
-      transition: background 0.2s;
+      transition: all 0.2s;
     }
 
-    .btn-opcion:hover {
+    .btn-opcion:hover:not(:disabled) {
       background: #eef2ff;
+    }
+
+    .btn-opcion:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
     }
 
     .resultado-trivia {
@@ -364,16 +362,9 @@
       <p><strong>📖 Definición complementaria:</strong><br>
       La meiosis es un tipo de división celular especializada que permite formar células con la mitad de la cantidad de cromosomas que tiene una célula original. Durante este proceso, el material genético se reorganiza y se generan células diferentes entre sí.</p>
 
-      <div class="esquema-box">
-        <p>🖼️ Ejemplo visual</p>
-        <div style="margin-top: 10px;">
-          🧫 Célula inicial<br>
-          <div class="esquema-flecha">⬇️</div>
-          🧬🧬 Meiosis<br>
-          <div class="esquema-flecha">⬇️</div>
-          🧬 &nbsp; 🧬 &nbsp; 🧬 &nbsp; 🧬<br>
-          <small style="font-weight: normal; color: #555;">4 células con la mitad de cromosomas</small>
-        </div>
+      <div class="imagen-box">
+        <p style="margin-bottom: 8px; color: #666; font-weight: bold;">🖼️ Ejemplo visual</p>
+        <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&w=600&q=80" alt="Célula y meiosis">
       </div>
 
       <div class="dato-extra">
@@ -398,11 +389,9 @@
     <section id="para-que" class="seccion-card">
       <h2>🎯 2. ¿Para qué sirve?</h2>
 
-      <div class="esquema-box">
-        <p>🖼️ Esquema visual</p>
-        <div style="margin-top: 10px; font-size: 22px;">
-          🥚 Óvulo + 🧬 Espermatozoide
-        </div>
+      <div class="imagen-box">
+        <p style="margin-bottom: 8px; color: #666; font-weight: bold;">🖼️ Óvulo y espermatozoide</p>
+        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80" alt="Gametos">
       </div>
 
       <p><strong>📖 ¿Qué estamos viendo?</strong><br>
@@ -430,12 +419,9 @@
     <section id="donde" class="seccion-card">
       <h2>📍 3. ¿Dónde ocurre la meiosis?</h2>
 
-      <div class="esquema-box">
-        <p>🖼️ Ejemplo visual</p>
-        <div style="margin-top: 10px;">
-          👨 Testículos ➔ Producen espermatozoides<br>
-          👩 Ovarios ➔ Producen óvulos
-        </div>
+      <div class="imagen-box">
+        <p style="margin-bottom: 8px; color: #666; font-weight: bold;">🖼️ Órganos reproductores (Gónadas)</p>
+        <p>👨 Testículos ➔ Producen espermatozoides | 👩 Ovarios ➔ Producen óvulos</p>
       </div>
 
       <p><strong>📖 ¿Qué estamos viendo?</strong><br>
@@ -466,17 +452,9 @@
       <p><strong>🧬 ¿Qué sucede?</strong><br>
       En la Meiosis I, los cromosomas homólogos se separan. Al finalizar esta primera división, se forman dos células.</p>
 
-      <div class="esquema-box">
-        <p>🖼️ Esquema visual</p>
-        <div style="margin-top: 10px;">
-          🧫 Célula inicial (🧬🧬 🧬🧬)<br>
-          <div class="esquema-flecha">⬇️</div>
-          <em>Los cromosomas homólogos se separan</em><br>
-          ↙️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↘️<br>
-          🧬 🧬 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🧬 🧬<br>
-          <div class="esquema-flecha">⬇️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⬇️</div>
-          <strong>2 células resultantes</strong>
-        </div>
+      <div class="imagen-box">
+        <p style="margin-bottom: 8px; color: #666; font-weight: bold;">🖼️ Esquema de la Meiosis I</p>
+        <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=600&q=80" alt="Meiosis I">
       </div>
 
       <p><strong>¿Qué estamos viendo?</strong><br>
@@ -530,18 +508,10 @@
       <h2>🔬 5. Meiosis II</h2>
 
       <p><strong>🖼️ Primero: ¿qué pasa?</strong></p>
-      
-      <div class="esquema-box">
-        <p><strong>2 células iniciales (de Meiosis I)</strong></p>
-        <div style="margin-top: 10px;">
-          🧬 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🧬<br>
-          <div class="esquema-flecha">⬇️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⬇️</div>
-          <em>Se separan las cromátidas hermanas</em><br>
-          ↙️ ↘️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↙️ ↘️<br>
-          🧬 &nbsp; 🧬 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🧬 &nbsp; 🧬<br>
-          <div class="esquema-flecha">⬇️</div>
-          <strong>4 células haploides</strong>
-        </div>
+
+      <div class="imagen-box">
+        <p style="margin-bottom: 8px; color: #666; font-weight: bold;">🖼️ Esquema de la Meiosis II</p>
+        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80" alt="Meiosis II">
       </div>
 
       <p><strong>📖 ¿Qué estamos viendo?</strong><br>
@@ -594,20 +564,9 @@
     <section id="resultado" class="seccion-card">
       <h2>🧩 6. Resultado final</h2>
 
-      <div class="esquema-box">
-        <p>🖼️ Antes ➔ Proceso ➔ Resultado</p>
-        <div style="margin-top: 15px;">
-          🧫 <strong>1 célula inicial</strong><br>
-          <div class="esquema-flecha">⬇️</div>
-          🔬 <strong>Meiosis I</strong><br>
-          <div class="esquema-flecha">⬇️</div>
-          🧫 🧫 <strong>2 células</strong><br>
-          <div class="esquema-flecha">⬇️</div>
-          🔬 <strong>Meiosis II</strong><br>
-          <div class="esquema-flecha">⬇️</div>
-          🧬 &nbsp; 🧬 &nbsp; 🧬 &nbsp; 🧬<br>
-          <strong>4 células haploides</strong>
-        </div>
+      <div class="imagen-box">
+        <p style="margin-bottom: 8px; color: #666; font-weight: bold;">🖼️ Proceso completo: Antes ➔ Proceso ➔ Resultado</p>
+        <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=600&q=80" alt="Resultado Final">
       </div>
 
       <p><strong>📖 ¿Qué obtenemos?</strong><br>
@@ -646,18 +605,28 @@
     🧬 Página complementaria para la exposición sobre meiosis.
   </footer>
 
-  <!-- SCRIPT DE TRIVIA INTERACTIVA -->
+  <!-- SCRIPT DE TRIVIA INTERACTIVA (BLOQUEO DE BOTONES) -->
   <script>
     function responder(boton, esCorrecto, mensaje) {
-      const contenedor = boton.parentElement.parentElement;
-      const resultado = contenedor.querySelector('.resultado-trivia');
+      const contenedor = boton.parentElement;
+      const botones = contenedor.querySelectorAll('.btn-opcion');
+      const resultado = contenedor.nextElementSibling;
       
+      // Deshabilitar todos los botones de esta pregunta
+      botones.forEach(btn => {
+        btn.disabled = true;
+      });
+
+      // Mostrar el resultado
       resultado.style.display = 'block';
-      
       if (esCorrecto) {
         resultado.className = 'resultado-trivia resultado-correcto';
+        boton.style.background = '#d1fae5';
+        boton.style.borderColor = '#059669';
       } else {
         resultado.className = 'resultado-trivia resultado-incorrecto';
+        boton.style.background = '#fee2e2';
+        boton.style.borderColor = '#dc2626';
       }
       resultado.innerHTML = mensaje;
     }
