@@ -144,9 +144,149 @@
       line-height: 1.6;
     }
 
+    /* ESQUEMAS VISUALES */
+    .esquema-box {
+      background: #f0f2fe;
+      border-left: 4px solid #5555d8;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .esquema-flecha {
+      margin: 8px 0;
+      color: #5555d8;
+      font-size: 20px;
+    }
+
+    /* DATO EXTRA Y CONCEPTOS CLAVE */
+    .dato-extra {
+      background: #fff8e7;
+      border-left: 4px solid #ffb703;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+      color: #5c4500;
+      line-height: 1.5;
+    }
+
+    .palabra-clave {
+      background: #eef2ff;
+      border-left: 4px solid #4f46e5;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+      color: #1e1b4b;
+    }
+
+    /* TARJETAS DE ETAPAS */
+    .etapas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .etapa-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .etapa-card h4 {
+      color: #5555d8;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .etapa-card p {
+      font-size: 14px;
+      margin-bottom: 0;
+      color: #475569;
+    }
+
+    /* TRIVIA / PONETE A PRUEBA */
+    .trivia-box {
+      background: #f8f9fa;
+      border: 1px solid #e2e8f0;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .trivia-box h4 {
+      color: #5555d8;
+      margin-bottom: 10px;
+    }
+
+    .opciones-trivia {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-opcion {
+      background: white;
+      border: 1px solid #cbd5e1;
+      padding: 12px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 15px;
+      transition: background 0.2s;
+    }
+
+    .btn-opcion:hover {
+      background: #eef2ff;
+    }
+
+    .resultado-trivia {
+      margin-top: 12px;
+      font-weight: bold;
+      display: none;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .resultado-correcto {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    .resultado-incorrecto {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* CARTEL DE CIERRE */
+    .cierre-box {
+      background: linear-gradient(135deg, #5b5ce2, #7c4dff);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      border-radius: 18px;
+      margin-top: 40px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    }
+
+    .cierre-box h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .cierre-box p {
+      font-size: 16px;
+      color: #f0f2fe;
+      margin-bottom: 0;
+    }
+
     .volver-arriba {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 15px;
       color: #5555d8;
       text-decoration: none;
       font-weight: bold;
@@ -217,74 +357,311 @@
       </a>
     </div>
 
-    <!-- CONTENIDO DETALLADO DE CADA TEMA -->
-
+    <!-- SECCIÓN 1 -->
     <section id="que-es" class="seccion-card">
       <h2>🧬 1. ¿Qué es la meiosis?</h2>
-      <p>La <strong>meiosis</strong> es un proceso especial de división celular en el cual una célula diploide (con el juego completo de cromosomas) se divide para formar células haploides (con la mitad del material genético).</p>
-      <p>A diferencia de la mitosis, la meiosis incluye dos divisiones consecutivas (Meiosis I y Meiosis II), reduciendo el número de cromosomas a la mitad.</p>
+      
+      <p><strong>📖 Definición complementaria:</strong><br>
+      La meiosis es un tipo de división celular especializada que permite formar células con la mitad de la cantidad de cromosomas que tiene una célula original. Durante este proceso, el material genético se reorganiza y se generan células diferentes entre sí.</p>
+
+      <div class="esquema-box">
+        <p>🖼️ Ejemplo visual</p>
+        <div style="margin-top: 10px;">
+          🧫 Célula inicial<br>
+          <div class="esquema-flecha">⬇️</div>
+          🧬🧬 Meiosis<br>
+          <div class="esquema-flecha">⬇️</div>
+          🧬 &nbsp; 🧬 &nbsp; 🧬 &nbsp; 🧬<br>
+          <small style="font-weight: normal; color: #555;">4 células con la mitad de cromosomas</small>
+        </div>
+      </div>
+
+      <div class="dato-extra">
+        💡 <strong>Dato extra:</strong> Una característica importante de la meiosis es que las células que se forman no son genéticamente idénticas entre sí.
+      </div>
+
+      <div class="trivia-box">
+        <h4>❓ ¡Ponete a prueba!</h4>
+        <p>¿Qué ocurre con la cantidad de cromosomas durante la meiosis?</p>
+        <div class="opciones-trivia">
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es B: se reduce a la mitad.')">A) Se mantiene igual.</button>
+          <button class="btn-opcion" onclick="responder(this, true, '✅ ¡Exacto! En la meiosis se reduce a la mitad.')">B) Se reduce a la mitad.</button>
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es B: se reduce a la mitad.')">C) Se duplica.</button>
+        </div>
+        <div class="resultado-trivia"></div>
+      </div>
+
       <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
     </section>
 
+    <!-- SECCIÓN 2 -->
     <section id="para-que" class="seccion-card">
       <h2>🎯 2. ¿Para qué sirve?</h2>
-      <p>La meiosis cumple dos funciones vitales principales para los seres vivos:</p>
-      <ul>
-        <li><strong>Formación de gametos:</strong> Permite producir óvulos y espermatozoides necesarios para la reproducción sexual.</li>
-        <li><strong>Variabilidad genética:</strong> Gracias al intercambio de material genético (entrecurzamiento), cada célula resultante es genéticamente única, lo que genera diversidad en la especie.</li>
-      </ul>
+
+      <div class="esquema-box">
+        <p>🖼️ Esquema visual</p>
+        <div style="margin-top: 10px; font-size: 22px;">
+          🥚 Óvulo + 🧬 Espermatozoide
+        </div>
+      </div>
+
+      <p><strong>📖 ¿Qué estamos viendo?</strong><br>
+      La meiosis permite producir células sexuales, como los óvulos y los espermatozoides. Estas células tienen la mitad de los cromosomas.</p>
+
+      <div class="dato-extra">
+        💡 <strong>Dato extra:</strong> Al tener la mitad de los cromosomas, cuando se unen dos células sexuales durante la reproducción, se recupera la cantidad de cromosomas característica de la especie.
+      </div>
+
+      <div class="trivia-box">
+        <h4>❓ ¡Ponete a prueba!</h4>
+        <p>¿Cuál es una función principal de la meiosis?</p>
+        <div class="opciones-trivia">
+          <button class="btn-opcion" onclick="responder(this, true, '✅ ¡Correcto! Su función principal es producir células sexuales (gametos).')">A) Producir células sexuales.</button>
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es A: Producir células sexuales.')">B) Producir células idénticas para reparar tejidos.</button>
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es A: Producir células sexuales.')">C) Aumentar la cantidad de cromosomas.</button>
+        </div>
+        <div class="resultado-trivia"></div>
+      </div>
+
       <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
     </section>
 
+    <!-- SECCIÓN 3 -->
     <section id="donde" class="seccion-card">
-      <h2>📍 3. ¿Dónde ocurre?</h2>
-      <p>La meiosis no ocurre en cualquier célula de nuestro cuerpo. Se lleva a cabo exclusivamente en las <strong>células germinales</strong> ubicadas en los órganos reproductores (gónadas):</p>
-      <ul>
-        <li>En los <strong>testículos</strong> (para producir espermatozoides mediante la espermatogénesis).</li>
-        <li>En los <strong>ovarios</strong> (para producir óvulos mediante la ovogénesis).</li>
-      </ul>
+      <h2>📍 3. ¿Dónde ocurre la meiosis?</h2>
+
+      <div class="esquema-box">
+        <p>🖼️ Ejemplo visual</p>
+        <div style="margin-top: 10px;">
+          👨 Testículos ➔ Producen espermatozoides<br>
+          👩 Ovarios ➔ Producen óvulos
+        </div>
+      </div>
+
+      <p><strong>📖 ¿Qué estamos viendo?</strong><br>
+      La meiosis ocurre en las células que participan en la formación de las células sexuales, principalmente en los testículos y los ovarios.</p>
+
+      <div class="dato-extra">
+        💡 <strong>Dato extra:</strong> Las células sexuales producidas mediante meiosis son <strong>haploides</strong>, es decir, tienen un solo conjunto de cromosomas.
+      </div>
+
+      <div class="trivia-box">
+        <h4>❓ ¡Ponete a prueba!</h4>
+        <p>¿En qué órganos ocurre la meiosis para formar las células sexuales?</p>
+        <div class="opciones-trivia">
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es B: En los testículos y los ovarios.')">A) En los pulmones y el corazón.</button>
+          <button class="btn-opcion" onclick="responder(this, true, '✅ ¡Exacto! Ocurre en las gónadas: testículos y ovarios.')">B) En los testículos y los ovarios.</button>
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es B: En los testículos y los ovarios.')">C) En el estómago y los intestinos.</button>
+        </div>
+        <div class="resultado-trivia"></div>
+      </div>
+
       <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
     </section>
 
+    <!-- SECCIÓN 4 -->
     <section id="meiosis1" class="seccion-card">
-      <h2>🔬 4. Meiosis I (Primera División)</h2>
-      <p>Conocida como la fase reduccional. Los cromosomas homólogos se separan. Se compone de 4 etapas principales:</p>
-      <ul>
-        <li><strong>Profase I:</strong> Los cromosomas se condensan y ocurre el <em>entrecruzamiento</em> (crossing-over), donde se intercambia información genética.</li>
-        <li><strong>Metafase I:</strong> Los pares de cromosomas se alinean en el centro de la célula.</li>
-        <li><strong>Anafase I:</strong> Los cromosomas homólogos se separan y van hacia polos opuestos.</li>
-        <li><strong>Telofase I:</strong> Se forman dos células hijas, cada una con la mitad de los cromosomas de la célula madre.</li>
-      </ul>
+      <h2>🔬 4. Meiosis I</h2>
+
+      <p><strong>🧬 ¿Qué sucede?</strong><br>
+      En la Meiosis I, los cromosomas homólogos se separan. Al finalizar esta primera división, se forman dos células.</p>
+
+      <div class="esquema-box">
+        <p>🖼️ Esquema visual</p>
+        <div style="margin-top: 10px;">
+          🧫 Célula inicial (🧬🧬 🧬🧬)<br>
+          <div class="esquema-flecha">⬇️</div>
+          <em>Los cromosomas homólogos se separan</em><br>
+          ↙️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↘️<br>
+          🧬 🧬 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🧬 🧬<br>
+          <div class="esquema-flecha">⬇️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⬇️</div>
+          <strong>2 células resultantes</strong>
+        </div>
+      </div>
+
+      <p><strong>¿Qué estamos viendo?</strong><br>
+      Los cromosomas homólogos se distribuyen en dos células diferentes.</p>
+
+      <p><strong>🔍 Las etapas de la Meiosis I:</strong></p>
+      <div class="etapas-grid">
+        <div class="etapa-card">
+          <h4>1️⃣ Profase I</h4>
+          <p>Los cromosomas se condensan y los cromosomas homólogos se emparejan.</p>
+        </div>
+        <div class="etapa-card">
+          <h4>2️⃣ Metafase I</h4>
+          <p>Los pares de cromosomas homólogos se ubican en el centro de la célula.</p>
+        </div>
+        <div class="etapa-card">
+          <h4>3️⃣ Anafase I</h4>
+          <p>Los cromosomas homólogos se separan y se dirigen hacia polos opuestos.</p>
+        </div>
+        <div class="etapa-card">
+          <h4>4️⃣ Telofase I</h4>
+          <p>Se completa la primera división y se forman dos células.</p>
+        </div>
+      </div>
+
+      <div class="palabra-clave">
+        💡 <strong>Palabra importante: Cromosomas homólogos 🧬🧬</strong><br>
+        Son los cromosomas que forman un par y contienen información para los mismos tipos de características.
+      </div>
+
+      <div class="dato-extra">
+        🎯 <strong>Dato extra:</strong> La Meiosis I se conoce como <em>división reduccional</em>, porque después de esta división las células tienen una cantidad reducida de cromosomas.
+      </div>
+
+      <div class="trivia-box">
+        <h4>🧠 Mini desafío</h4>
+        <p>¿Qué se separa durante la Meiosis I?</p>
+        <div class="opciones-trivia">
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es B: Los cromosomas homólogos.')">A) Las cromátidas hermanas.</button>
+          <button class="btn-opcion" onclick="responder(this, true, '✅ ¡Muy bien! En la Meiosis I se separan los cromosomas homólogos.')">B) Los cromosomas homólogos.</button>
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es B: Los cromosomas homólogos.')">C) Las células sexuales.</button>
+        </div>
+        <div class="resultado-trivia"></div>
+      </div>
+
       <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
     </section>
 
+    <!-- SECCIÓN 5 -->
     <section id="meiosis2" class="seccion-card">
-      <h2>🔬 5. Meiosis II (Segunda División)</h2>
-      <p>Es muy similar a una mitosis convencional. Ocurre sin una duplicación previa del ADN:</p>
-      <ul>
-        <li><strong>Profase II:</strong> La envoltura nuclear se desintegra nuevamente y las fibras del huso se forman.</li>
-        <li><strong>Metafase II:</strong> Los cromosomas se alinean de forma individual en el centro celular.</li>
-        <li><strong>Anafase II:</strong> Las cromátidas hermanas se separan y son arrastradas hacia extremos opuestos.</li>
-        <li><strong>Telofase II:</strong> Se vuelven a formar las membranas nucleares alrededor de los nuevos núcleos.</li>
-      </ul>
+      <h2>🔬 5. Meiosis II</h2>
+
+      <p><strong>🖼️ Primero: ¿qué pasa?</strong></p>
+      
+      <div class="esquema-box">
+        <p><strong>2 células iniciales (de Meiosis I)</strong></p>
+        <div style="margin-top: 10px;">
+          🧬 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🧬<br>
+          <div class="esquema-flecha">⬇️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⬇️</div>
+          <em>Se separan las cromátidas hermanas</em><br>
+          ↙️ ↘️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↙️ ↘️<br>
+          🧬 &nbsp; 🧬 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🧬 &nbsp; 🧬<br>
+          <div class="esquema-flecha">⬇️</div>
+          <strong>4 células haploides</strong>
+        </div>
+      </div>
+
+      <p><strong>📖 ¿Qué estamos viendo?</strong><br>
+      En la Meiosis II, las cromátidas hermanas se separan. Al finalizar esta segunda división, se obtienen cuatro células haploides.</p>
+
+      <p><strong>🔍 Las etapas:</strong></p>
+      <div class="etapas-grid">
+        <div class="etapa-card">
+          <h4>1️⃣ Profase II</h4>
+          <p>Los cromosomas vuelven a organizarse para la división.</p>
+        </div>
+        <div class="etapa-card">
+          <h4>2️⃣ Metafase II</h4>
+          <p>Los cromosomas se ubican en el centro de cada célula.</p>
+        </div>
+        <div class="etapa-card">
+          <h4>3️⃣ Anafase II</h4>
+          <p>Las cromátidas hermanas se separan.</p>
+        </div>
+        <div class="etapa-card">
+          <h4>4️⃣ Telofase II</h4>
+          <p>Termina la división y se forman las cuatro células.</p>
+        </div>
+      </div>
+
+      <div class="palabra-clave">
+        💡 <strong>Palabra importante: Cromátidas hermanas 🧬🧬</strong><br>
+        Son las dos copias de un cromosoma que permanecen unidas antes de separarse.
+      </div>
+
+      <div class="dato-extra">
+        🎯 <strong>Dato extra:</strong> La Meiosis II se parece a una división celular en la que se separan las cromátidas hermanas, pero parte de las células que entran en esta etapa ya tienen la mitad de los cromosomas.
+      </div>
+
+      <div class="trivia-box">
+        <h4>🧠 Mini desafío</h4>
+        <p>¿Qué se separa durante la Meiosis II?</p>
+        <div class="opciones-trivia">
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es B: Las cromátidas hermanas.')">A) Los cromosomas homólogos.</button>
+          <button class="btn-opcion" onclick="responder(this, true, '✅ ¡Excelente! En la Meiosis II se separan las cromátidas hermanas.')">B) Las cromátidas hermanas.</button>
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es B: Las cromátidas hermanas.')">C) Los pares de células.</button>
+        </div>
+        <div class="resultado-trivia"></div>
+      </div>
+
       <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
     </section>
 
+    <!-- SECCIÓN 6 -->
     <section id="resultado" class="seccion-card">
       <h2>🧩 6. Resultado final</h2>
-      <p>Al concluir la Meiosis I y la Meiosis II, obtenemos:</p>
-      <ul>
-        <li><strong>4 células hijas haploides (n).</strong></li>
-        <li>Todas las células resultantes son <strong>genéticamente distintas</strong> entre sí y respecto a la célula madre.</li>
-      </ul>
+
+      <div class="esquema-box">
+        <p>🖼️ Antes ➔ Proceso ➔ Resultado</p>
+        <div style="margin-top: 15px;">
+          🧫 <strong>1 célula inicial</strong><br>
+          <div class="esquema-flecha">⬇️</div>
+          🔬 <strong>Meiosis I</strong><br>
+          <div class="esquema-flecha">⬇️</div>
+          🧫 🧫 <strong>2 células</strong><br>
+          <div class="esquema-flecha">⬇️</div>
+          🔬 <strong>Meiosis II</strong><br>
+          <div class="esquema-flecha">⬇️</div>
+          🧬 &nbsp; 🧬 &nbsp; 🧬 &nbsp; 🧬<br>
+          <strong>4 células haploides</strong>
+        </div>
+      </div>
+
+      <p><strong>📖 ¿Qué obtenemos?</strong><br>
+      Al finalizar la meiosis se forman cuatro células haploides, que tienen la mitad de los cromosomas de la célula inicial y son genéticamente diferentes entre sí.</p>
+
+      <div class="dato-extra">
+        💡 <strong>Para recordar:</strong><br>
+        🟢 <strong>Meiosis I</strong> ➔ se separan cromosomas homólogos<br>
+        🟢 <strong>Meiosis II</strong> ➔ se separan cromátidas hermanas<br>
+        🟢 <strong>Resultado</strong> ➔ 4 células haploides
+      </div>
+
+      <div class="trivia-box">
+        <h4>🧠 Desafío final</h4>
+        <p>Ordená mentalmente el proceso y elegí la secuencia correcta:</p>
+        <div class="opciones-trivia">
+          <button class="btn-opcion" onclick="responder(this, true, '✅ ¡Perfecto! El orden correcto es: Célula inicial ➔ Meiosis I ➔ 2 células ➔ Meiosis II ➔ 4 células.')">A) Célula inicial ➔ Meiosis I ➔ 2 células ➔ Meiosis II ➔ 4 células</button>
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es A: Célula inicial ➔ Meiosis I ➔ 2 células ➔ Meiosis II ➔ 4 células.')">B) Célula inicial ➔ Meiosis II ➔ 2 células ➔ Meiosis I ➔ 4 células</button>
+          <button class="btn-opcion" onclick="responder(this, false, '❌ La respuesta correcta es A: Célula inicial ➔ Meiosis I ➔ 2 células ➔ Meiosis II ➔ 4 células.')">C) 2 células ➔ Meiosis I ➔ célula inicial ➔ Meiosis II ➔ 4 células</button>
+        </div>
+        <div class="resultado-trivia"></div>
+      </div>
+
       <a href="#menu" class="volver-arriba">⬆️ Volver al menú</a>
     </section>
+
+    <!-- CARTEL DE CIERRE -->
+    <div class="cierre-box">
+      <h3>🎉 ¡Llegaste al final!</h3>
+      <p>Ahora ya podés explicar qué es la meiosis, para qué sirve, dónde ocurre y qué sucede durante la Meiosis I y II.</p>
+    </div>
 
   </main>
 
   <footer>
     🧬 Página complementaria para la exposición sobre meiosis.
   </footer>
+
+  <!-- SCRIPT DE TRIVIA INTERACTIVA -->
+  <script>
+    function responder(boton, esCorrecto, mensaje) {
+      const contenedor = boton.parentElement.parentElement;
+      const resultado = contenedor.querySelector('.resultado-trivia');
+      
+      resultado.style.display = 'block';
+      
+      if (esCorrecto) {
+        resultado.className = 'resultado-trivia resultado-correcto';
+      } else {
+        resultado.className = 'resultado-trivia resultado-incorrecto';
+      }
+      resultado.innerHTML = mensaje;
+    }
+  </script>
 
 </body>
 </html>
